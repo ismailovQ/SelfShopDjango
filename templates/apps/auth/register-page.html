@@ -1,0 +1,33 @@
+{% extends 'apps/auth/base.html' %}
+{% load static %}
+
+{% block title_content %}
+    Register
+{% endblock %}
+
+{% block main_content %}
+    <div class="reg-box">
+
+        <form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+
+            <div class="username">
+                <input name="username" type="text" placeholder="Username">
+            </div>
+
+
+            <div class="email">
+                <input name="email" type="email" placeholder="E-mail">
+            </div>
+
+            <div class="password1">
+                <input name="password1" type="password" placeholder="Password">
+            </div>
+
+            <div class="password2">
+                <input name="password2" type="password" placeholder="Confirm Password">
+            </div>
+
+        </form>
+
+    </div>
+{% endblock %}
